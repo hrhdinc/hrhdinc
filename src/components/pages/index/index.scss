@@ -1,0 +1,176 @@
+@use '../../../assets/scss/variables.scss' as *;
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        background-color: $background-1;
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        position: fixed;
+        
+
+        .header {
+            @media (max-width: 768px) {
+                height: 50px;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+
+            background: linear-gradient(
+                to bottom, 
+                #000000ff 0%, 
+                #000000bb 90%, 
+                #00000000 100%
+            );
+
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem;
+            font-size: 1.25rem;
+
+            &-phone {
+                @media (max-width: 768px) {
+                    margin-left: 0.5rem;
+                }
+
+                font-weight: 300;
+                margin-left: 2rem;
+
+                &-link {
+                    color: $blue-1;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $blue-2;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &-email {
+                @media (max-width: 768px) {
+                    margin-right: 0.5rem;
+                }
+
+                font-weight: 300;
+                margin-right: 2rem;
+
+                &-link {
+                    color: $blue-1;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $blue-2;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .main {
+            width: 100%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            &-title {
+                @media (max-width: 768px) {
+                    font-size: 5rem;
+                }
+                text-shadow: 0 0 5px $blue-12;
+                text-align: center;
+                font-size: 10rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            &-link-group {
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            &-link {
+                @media (max-width: 768px) {
+                    font-size: 2rem;
+                }
+
+                text-shadow: 0 0 5px $blue-12;
+                text-align: center;
+                font-size: 3rem;
+                font-weight: 400;
+                margin-bottom: 1rem;
+                color: $blue-4;
+                text-decoration: none;
+
+                &:hover {
+                    color: $blue-3;
+                    text-decoration: underline;
+                }
+            }
+
+            &-padding-bottom {
+                padding-bottom: 5rem;
+            }
+        }
+
+        .footer {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 2rem;
+            opacity: 0.5;
+            background: linear-gradient(
+                to top, 
+                #000000ff 0%, 
+                #00000000 100%, 
+            );
+
+            &-title {
+                text-shadow: 0 0 5px $blue-12;
+                font-size: 1rem;
+                font-weight: 200;
+                color: $blue-1;
+            }
+        }
+    }
+}
