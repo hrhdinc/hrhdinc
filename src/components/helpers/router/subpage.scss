@@ -1,0 +1,14 @@
+@use '../../../assets/scss/variables.scss' as *;
+
+.subpage-main {
+    min-height: 100vh;
+}
+
+.subpage-title {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 200;
+}

@@ -1,26 +1,19 @@
 import React from "react";
 
+import PortfolioCard from "./portfolioCard/PortfolioCard";
+
 import './portfolio.scss';
 
 
 
 const classes = {
-    main: "main",
-    mainTitle: "main-title",
-    mainCardsList: 'main-cards-list',
-    mainItem: 'main-cards-list-item',
-    cardTitle: 'main-cards-list-item-title',
-    cardDescription: 'main-cards-list-item-description',
-    cardImage: 'main-cards-list-item-image'
+    subpageMain: 'subpage-main',
+    portfolioTitle: 'portfolio-title',
+    portfolioCards: 'portfolio-cards',
+    portfolioCardsWrapper: 'portfolio-cards-wrapper',
 };
 
 const portfolios = [
-    {
-        name: 123,
-        description: 1231,
-        image: 'https://placekitten.com/200/300',
-        imageHover: 'https://placekitten.com/200/300'
-    },
     {
         name: 123,
         description: 1231,
@@ -42,19 +35,14 @@ const portfolios = [
 ]
 const Portfolio = () => {
     return (
-        <main className={classes.main}>
-            <h1 className={classes.mainTitle}>Portfolio</h1>
-            <div className={classes.mainCardsList}>
-                {
-                    portfolios.map(item => (
-                        <div style={{ backgroundImage: `url(${item.image})` }} className={classes.mainItem}>
-                            <h2 className={classes.cardTitle}>{item.name}</h2>
-                            <p className={classes.cardDescription}>{item.description}</p>
-                        </div>
-                    ))
-                }
+        <>
+        <h1 className={classes.portfolioTitle}>Portfolio</h1>
+        <div className={classes.portfolioCardsWrapper}>
+            <div className={classes.portfolioCards}>
+                { portfolios.map( item => <PortfolioCard data={item} />) }
             </div>
-        </main>
+        </div>
+        </>
     );
 };
 

@@ -1,0 +1,28 @@
+@use "../../../assets/scss/variables.scss" as *;
+
+.underscore-link {
+    color: $blue-3;
+    text-decoration: none;
+    transition: 1s;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: '';
+        background-color: $blue-4;
+        width: 1rem;
+        left: 0px;
+        bottom: -.1rem;
+        transition: width 0.3s ease-in-out;
+        height: .1rem;
+    }
+
+    &:hover {
+        color: $blue-4;
+        transition: 0.3s;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}

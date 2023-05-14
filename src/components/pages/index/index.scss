@@ -63,12 +63,6 @@
 
                 &-link {
                     color: $blue-1;
-                    text-decoration: none;
-
-                    &:hover {
-                        color: $blue-2;
-                        text-decoration: underline;
-                    }
                 }
             }
 
@@ -82,12 +76,6 @@
 
                 &-link {
                     color: $blue-1;
-                    text-decoration: none;
-
-                    &:hover {
-                        color: $blue-2;
-                        text-decoration: underline;
-                    }
                 }
             }
         }
@@ -137,12 +125,6 @@
                 font-weight: 400;
                 margin-bottom: 1rem;
                 color: $blue-4;
-                text-decoration: none;
-
-                &:hover {
-                    color: $blue-3;
-                    text-decoration: underline;
-                }
             }
 
             &-padding-bottom {

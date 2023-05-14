@@ -1,47 +1,17 @@
 @use '../../../assets/scss/variables.scss' as *;
 
 .header {
-  background-color: $blue-12;
-  color: $blue-2;
+    background-color: $blue-12;
+    color: $blue-2;
 
-  &-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 20px;
-    list-style: none;
-    font-size: 1.25rem;
-    margin: 0;
-    padding: 1.5rem;
-  }
-
-  &-link {
-    text-decoration: none;
-    color: $blue-3;
-    transition: 1s;
-    position: relative;
-
-    &:after {
-      position: absolute;
-      content: '';
-      background-color: $blue-4;
-      width: 10%;
-      left: -1px;
-      right: -1px;
-      bottom: -3px;
-      transition: width 0.3s ease-in-out;
-      height: 2px;
-
+    &-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+        list-style: none;
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 1.5rem;
     }
-
-    &:hover {
-      color: $blue-4;
-      transition: 0.3s;
-
-      &:after {
-        width: 100%;
-
-      }
-    }
-  }
 }

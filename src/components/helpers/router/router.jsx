@@ -8,7 +8,7 @@ import Subpage from "./Subpage";
 const router = createBrowserRouter([
     { path: "", element: <Index />},
     { path: "/", element: <Subpage />, children: [
-        { path: "portfolio", element: <Portfolio /> },
+        { path: "portfolio", element: <Portfolio title="Portfolio" />},
     ]},
     { path: "*", element: <NotFound /> },
 ]);

@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
 import React from "react";
+
+import UnderscoreLink from "../../common/underscore-link/UnderscoreLink";
 
 import bz from "../../../assets/images/bz.jpg";
 import './index.scss';
@@ -31,22 +32,22 @@ const Index = () => {
             <div className={classes.content}>
                 <header className={classes.header}>
                     <div className={classes.headerPhone}>
-                        <Link to="tel:1234567890" className={classes.headerPhoneLink}>
+                        <UnderscoreLink to="tel:1234567890" className={classes.headerPhoneLink}>
                             +1 (234) 567-890
-                        </Link>
+                        </UnderscoreLink>
                     </div>
                     <div className={classes.headerEmail}>
-                        <Link to="mailto:email@email.email" className={classes.headerEmailLink}>
+                        <UnderscoreLink to="mailto:email@email.email" className={classes.headerEmailLink}>
                             email@email.email
-                        </Link>
+                        </UnderscoreLink>
                     </div>
                 </header>
                 <main className={classes.main}>
                     <div className={classes.mainPaddingBottom}></div>
                     <h1 className={classes.mainTitle}>Blue Zenith</h1>
                     <div className={classes.mainLinkGroup}>
-                        <Link className={classes.mainLink} to="/portfolio">Portfolio</Link>
-                        <Link className={classes.mainLink} to="/careers">Careers</Link>
+                        <UnderscoreLink className={classes.mainLink} to="/portfolio">Portfolio</UnderscoreLink>
+                        <UnderscoreLink className={classes.mainLink} to="/careers">Careers</UnderscoreLink>
                     </div>
 
                 </main>

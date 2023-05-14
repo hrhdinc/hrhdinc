@@ -1,71 +1,29 @@
 @use '../../../assets/scss/variables.scss' as *;
 
-.main {
-  background-color: $blue-1;
-  color: $blue-12;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2.5rem;
-
-  &-title {
-    margin: 0;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 200;
-  }
-
-  &-cards-list {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1024px;
-    gap: 2px;
-    min-width: 100%;
-
-    &-item {
-
-      width: calc(50% - 2px);
-      background-size: auto;
-      transition: .5s;
-      opacity: 50%;
-      background-repeat: no-repeat;
-      // background-size: 100%;
-      margin: 0;
-      padding: 0;
-
-      &:hover {
-
-        opacity: 100%;
-      }
-
-      &-title {
-        text-align: center;
+.portfolio {
+    &-title {
         margin: 0;
-        font-size: 2rem;
-        color: $blue-3;
-        text-shadow: 0 0 10px black;
-      }
-
-      &-description {
-        color: $blue-4;
+        padding: 15px;
+        width: 100%;
         text-align: center;
-        font-size: 1.25rem;
-        text-shadow: 0 0 10px black;
-      }
-
-      &-image {
-
-        display: block;
-        object-fit: cover;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-
-      }
+        font-size: 5rem;
+        font-weight: 200;
     }
-  }
+
+    &-cards {
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        display: grid;
+        max-width: 980px;
+        width: 100%;
+        grid-template-columns: repeat(2, 50%);
+        margin-bottom: 3rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 100%;
+        }
+    }
 }
